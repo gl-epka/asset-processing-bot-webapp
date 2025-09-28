@@ -2,7 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
   "packages": [
     "python@3.13",
-    "poetry@2"
+    "poetry@2",
+    "postgresql@latest",
+    "ngrok@latest"
   ],
   "shell": {
     "init_hook": [
