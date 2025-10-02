@@ -1,0 +1,11 @@
+version: "0.5"
+
+processes:
+  app:
+    command: poetry run uvicorn app.main:app
+    availability:
+      restart: "always"
+  ngrok:
+    command: ngrok http 8000 --url https://equipped-skink-winning.ngrok-free.app
+    availability:
+      restart: "always"
