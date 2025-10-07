@@ -1,4 +1,5 @@
 from pathlib import Path
+
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -11,7 +12,6 @@ class Settings(BaseSettings):
     BOT_TOKEN: str = Field(alias="BOT_TOKEN")
 
     def get_webhook_url(self) -> str:
-        """Возвращает URL вебхука с кодированием специальных символов."""
         return f"{self.WEBAPP_ENDPOINT}/webhook"
 
 

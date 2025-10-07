@@ -1,5 +1,5 @@
 {
-  "$schema":  "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
-  "packages": ["python@3.13", "poetry@2", "ngrok@latest"],
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "packages": ["python@3.13", "poetry@2", "ngrok@latest", "pnpm@latest"],
   "env_from": "jetpack-cloud"
 }

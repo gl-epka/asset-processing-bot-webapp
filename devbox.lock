@@ -53,6 +53,54 @@
         }
       }
     },
+    "pnpm@latest": {
+      "last_modified": "2025-09-21T00:54:27Z",
+      "resolved": "github:NixOS/nixpkgs/51c8f9cfaae8306d135095bcdb3df9027f95542d#pnpm",
+      "source": "devbox-search",
+      "version": "10.17.0",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/b04y9p0r0ld6wnxj520rb3r3icrbb746-pnpm-10.17.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/b04y9p0r0ld6wnxj520rb3r3icrbb746-pnpm-10.17.0"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6429h7ysbq22mcgjckqzp0nij3crcwss-pnpm-10.17.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6429h7ysbq22mcgjckqzp0nij3crcwss-pnpm-10.17.0"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/g43yrsmwbdcwvaswkp56053g9vrdis80-pnpm-10.17.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/g43yrsmwbdcwvaswkp56053g9vrdis80-pnpm-10.17.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kiancmmw300lq2gzz9kcn822x8xf7ikd-pnpm-10.17.0",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/kiancmmw300lq2gzz9kcn822x8xf7ikd-pnpm-10.17.0"
+        }
+      }
+    },
     "poetry@2": {
       "last_modified": "2025-09-19T15:05:15Z",
       "plugin_version": "0.0.4",

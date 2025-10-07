@@ -6,6 +6,10 @@ processes:
     availability:
       restart: "always"
   ngrok:
-    command: ngrok http 8000 --url https://equipped-skink-winning.ngrok-free.app
+    command: ngrok http 5173 --url https://equipped-skink-winning.ngrok-free.app
+    availability:
+      restart: "always"
+  webapp:
+    command: cd ./app/frontend/webapp && pnpm run dev
     availability:
       restart: "always"
