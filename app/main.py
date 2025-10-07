@@ -2,12 +2,11 @@ import logging
 from contextlib import asynccontextmanager
 
 from aiogram.types import Update
-
-from app.bot.create_bot import dp, bot, start_bot, stop_bot
+from app.bot.create_bot import bot, dp, start_bot, stop_bot
 from app.bot.handlers.start_router import start_router
 from app.config import settings
 from fastapi import FastAPI, Request
-from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -35,7 +34,22 @@ async def lifespan(app: FastAPI):  # pyright: ignore[reportUnusedParameter]
 
 
 app = FastAPI(lifespan=lifespan)
-app.mount("/static", StaticFiles(directory="app/static"), "static")
+
+
+origins = ["http://localhost:5173", "localhost:5173"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+@app.get("/", tags=["root"])
+async def read_root() -> dict[str, str]:
+    return {"message": "Welcome to your todo list."}
 
 
 @app.post("/webhook")
